@@ -6,8 +6,6 @@ export const bestLogistics = {
   shape,
   title: "Expert Flooring \n Installers",
   text: "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration",
-  bottomText: "We can help you stand out your business",
-  overlayContent: "We Are Since 2006 ! Over 200 Awards",
   counters: [
     {
       id: 1,
@@ -29,11 +27,6 @@ export const bestLogistics = {
       id: 1,
       className: "shape1 animated zoom-fade",
       image: shape1,
-    },
-    {
-      id: 2,
-      className: "shape3",
-      image: shape,
     },
 
     {

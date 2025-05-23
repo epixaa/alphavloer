@@ -21,11 +21,6 @@ const ProjectsOne = ({ showTop = false, className = "", projectsCount }) => {
                   <VisibilityCountUp count={count} />
                   <span className="plus">+</span> {text}
                 </Title>
-                <div className="projects-one__top-btn">
-                  <Link href="/portfolio" className="thm-btn">
-                    More Project
-                  </Link>
-                </div>
               </div>
             </Col>
           </Row>

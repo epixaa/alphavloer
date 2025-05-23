@@ -15,8 +15,6 @@ const AboutOne = ({
   const {
     shape1,
     image1,
-    image2,
-    videoId,
     tagline,
     title,
     text,
@@ -36,19 +34,6 @@ const AboutOne = ({
                 </div>
                 <div className="about-one__img1">
                   <Image src={image1.src} alt="" />
-                </div>
-
-                <div className="about-one__img2">
-                  <div className="video-icon">
-                    <a
-                      onClick={toggleOpen}
-                      className="video-popup animated zoomIn"
-                      title="Video"
-                    >
-                      <span className="icon-play-button-3"></span>
-                    </a>
-                  </div>
-                  <Image src={image2.src} alt="" />
                 </div>
               </div>
             </Col>
@@ -87,8 +72,8 @@ const AboutOne = ({
             </Col>
           </Row>
         </Container>
+        
       </section>
-      <VideoModal isOpen={isOpen} setOpen={toggleOpen} videoId={videoId} />
     </>
   );
 };

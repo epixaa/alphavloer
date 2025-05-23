@@ -52,12 +52,6 @@ const BestLogistics = ({ className = "" }) => {
                 <div className="best-logistics-one__content-bottom-text">
                   <p>{bottomText}</p>
                 </div>
-
-                <div className="best-logistics-one__content-bottom-btn">
-                  <a href="#" className="thm-btn">
-                    Learn More
-                  </a>
-                </div>
               </div>
             </div>
           </Col>
@@ -68,9 +62,6 @@ const BestLogistics = ({ className = "" }) => {
                   <Image src={image.src} alt="" />
                 </div>
               ))}
-              <div className="overlay-content">
-                <h2>{overlayContent}</h2>
-              </div>
             </div>
           </Col>
         </Row>

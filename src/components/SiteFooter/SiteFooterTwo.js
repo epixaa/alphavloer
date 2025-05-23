@@ -79,73 +79,7 @@ const SiteFooterTwo = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xl={3} lg={3} md={6} className="animated fadeInUp">
-                    <div className="footer-widget__column footer-widget__services">
-                      <h2 className="footer-widget__title">Services</h2>
-                      <ul className="footer-widget__services-list">
-                        {links.slice(0, 5).map(({ id, text, href }) => (
-                          <li
-                            key={id}
-                            className="footer-widget__services-list-item"
-                          >
-                            <a href={href}>{text}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col xl={2} lg={2} md={6} className="animated fadeInUp">
-                    <div className="footer-widget__column footer-widget__quick-links">
-                      <h2 className="footer-widget__title">Quick Links</h2>
-                      <ul className="footer-widget__quick-links-list">
-                        {links.slice(5).map(({ id, text, href }) => (
-                          <li
-                            key={id}
-                            className="footer-widget__quick-links-list-item"
-                          >
-                            <Link href={href}>{text}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Col>
-                  <Col xl={3} lg={3} md={6} className="animated fadeInUp">
-                    <div className="footer-widget__column footer-widget__contact-info">
-                      <h2 className="footer-widget__title">Get In Touch</h2>
-                      <div className="footer-widget__contact-info-subscribe-box">
-                        <form
-                          className="footer-widget__contact-subscribe-form"
-                          onSubmit={handleSubmit(onSubmit)}
-                        >
-                          <div className="input-box">
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Email address"
-                            />
-                          </div>
-                          <button type="submit">
-                            <Image src={arrow.src} alt="" />
-                          </button>
-                        </form>
-                        <div className="checked-box">
-                          <input
-                            type="checkbox"
-                            name="skipper1"
-                            id="skipper"
-                            defaultChecked
-                          />
-                          <label htmlFor="skipper">
-                            <span></span>
-                            {checkText}
-                          </label>
-                        </div>
-                      </div>
-                      <p className="footer-widget__about-email">
-                        <a href={`mailto:${email}`}>{email}</a>
-                      </p>
-                    </div>
-                  </Col>
+
                 </Row>
               </div>
             </Col>

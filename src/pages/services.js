@@ -3,7 +3,7 @@ import Header from "@/components/Header/Header";
 import Layout from "@/components/Layout/Layout";
 import PageHeader from "@/components/Reuseable/PageHeader";
 import ServicesOne from "@/components/Services/ServicesOne";
-import SiteFooterTwo from "@/components/SiteFooter/SiteFooterTwo";
+import SiteFooter from "@/components/SiteFooter/SiteFooter";
 import WorkOne from "@/components/Work/WorkOne";
 import React from "react";
 
@@ -15,7 +15,7 @@ const Services = () => {
       <ServicesOne />
       <BestLogistics />
       <WorkOne className="work-one--services" />
-      <SiteFooterTwo />
+      <SiteFooter />
     </Layout>
   );
 };

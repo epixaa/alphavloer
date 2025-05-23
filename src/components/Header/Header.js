@@ -76,11 +76,12 @@ const Header = ({ className = "" }) => {
 
               <div className="social-icon">
                 <ul>
-                  {socials.map(({ id, icon, href }) => (
+                  {socials.map(({ id, icon, href, target }) => (
                     <li key={id}>
                       <a
                         className={id !== socialsLength ? "me-1" : ""}
                         href={href}
+                        target={target}
                       >
                         <span className={icon}></span>
                       </a>

@@ -24,10 +24,7 @@ const ContactOne = ({ className = "" }) => {
         className="contact-one__img"
         style={{ backgroundImage: `url(${bg.src})` }}
       >
-        <div className="overlay-content text-center">
-          <h2>{count}</h2>
-          <TextSplit text={title} as="h3" />
-        </div>
+
       </div>
       <Container>
         <Row>

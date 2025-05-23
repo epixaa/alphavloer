@@ -12,11 +12,6 @@ const TeamOne = ({ className = "", teamsCount }) => {
     <section className={classNames("team-one", className)}>
       <Container>
         <Title tagline={tagline} title={title} className="text-center" />
-        <Row>
-          {teams.slice(0, teamsCount).map((team) => (
-            <TeamOneSingle team={team} key={team.id} />
-          ))}
-        </Row>
       </Container>
     </section>
   );

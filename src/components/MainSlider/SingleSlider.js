@@ -32,7 +32,7 @@ const SingleSlider = ({ slide = {}, sliderTwo = false }) => {
                 className="main-slider-one__title"
               />
               <div className="main-slider-one__btn">
-                <Link href="#" className="thm-btn">
+                <Link href="/portfolio" className="thm-btn">
                   {sliderTwo ? "Find Product" : "Our Solution"}
                 </Link>
               </div>
