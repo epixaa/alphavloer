@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@marketsystems/nextjs13-appdir-breadcrumbs": "^1.0.4",
+    "@netlify/plugin-nextjs": "^5.11.2",
     "bootstrap": "^5.1.3",
     "next": "^13.5.11",
     "react": "18.2.0",
