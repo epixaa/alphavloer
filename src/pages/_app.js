@@ -6,7 +6,6 @@ import "@/vendors/icomoon-icons/style.css";
 import "@/vendors/reey-font/stylesheet.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "node_modules/swiper/swiper-bundle.min.css";
-import "react-modal-video/css/modal-video.css";
 import "tiny-slider/dist/tiny-slider.css";
 
 // extra css

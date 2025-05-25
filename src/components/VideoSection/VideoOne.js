@@ -1,6 +1,6 @@
 import { videoOne } from "@/data/videoSection";
 import useToggle from "@/hooks/useToggle";
-import { Link, TextSplit, VideoModal } from "@/Reuseable";
+import { Link, TextSplit} from "@/Reuseable";
 import classNames from "@/utils/classNames";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
@@ -29,7 +29,6 @@ const VideoOne = ({ className = "" }) => {
           </Row>
         </Container>
       </section>
-      <VideoModal isOpen={isOpen} setOpen={toggleOpen} videoId={videoId} />
     </>
   );
 };

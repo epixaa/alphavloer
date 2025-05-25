@@ -1,5 +1,5 @@
 import useToggle from "@/hooks/useToggle";
-import { TextSplit, Title, VideoModal } from "@/Reuseable";
+import { TextSplit, Title} from "@/Reuseable";
 import classNames from "@/utils/classNames";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
