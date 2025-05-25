@@ -24,6 +24,7 @@
     "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
+    "@netlify/next": "^1.4.9",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6"
   }

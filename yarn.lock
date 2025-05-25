@@ -53,6 +53,11 @@
   resolved "https://registry.npmjs.org/@marketsystems/nextjs13-appdir-breadcrumbs/-/nextjs13-appdir-breadcrumbs-1.0.4.tgz"
   integrity sha512-SiPlbB6j0zuNAcFnmvv20tb5FwUBTjs3o3DYnRm554FbhnVj0RQC8xgx+vpYkzU4G5pgJnZWhGnMVF7W2QqCKQ==
 
+"@netlify/next@^1.4.9":
+  version "1.4.9"
+  resolved "https://registry.npmjs.org/@netlify/next/-/next-1.4.9.tgz"
+  integrity sha512-lrbY+CEhS9x0jV7oXVYi/rqxZ6ht5KeLGNZsgIPI34kpDaBuD/EfsyKa28BWeSrFalxRZmkMxQYRSTa82v3roQ==
+
 "@next/env@15.3.2":
   version "15.3.2"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.3.2.tgz"
@@ -1283,7 +1288,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc= sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^13.2.0, next@^15.3.2, next@>=10.2.0:
+next@^13.2.0, next@^15.3.2, next@>=10.2.0, next@>=12.2.0:
   version "15.3.2"
   resolved "https://registry.npmjs.org/next/-/next-15.3.2.tgz"
   integrity sha512-CA3BatMyHkxZ48sgOCLdVHjFU36N7TF1HhqAHLFOkV6buwZnvMI84Cug8xD56B9mCuKrqXnLn94417GrZ/jjCQ==
