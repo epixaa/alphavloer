@@ -30,10 +30,9 @@ const Link = ({
     as,
   };
   return (
-    <NextLink {...linkProps}>
-      <a href={typeof href === "string" ? href : href.href} {...props}>
+    <NextLink {...linkProps} href={typeof href === "string" ? href : href.href} {...props}>
         {children}
-      </a>
+      
     </NextLink>
   );
 };
