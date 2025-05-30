@@ -7,8 +7,36 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const { shape, bg, title2, tagline } = contactOne;
 
+const dutchCities = [
+  "Amsterdam",
+  "Rotterdam",
+  "The Hague (Den Haag)",
+  "Utrecht",
+  "Eindhoven",
+  "Tilburg",
+  "Groningen",
+  "Almere",
+  "Breda",
+  "Nijmegen",
+  "Enschede",
+  "Apeldoorn",
+  "Haarlem",
+  "Arnhem",
+  "'s-Hertogenbosch (Den Bosch)",
+  "Amersfoort",
+  "Maastricht",
+  "Leiden",
+  "Dordrecht",
+  "Zoetermeer",
+  "Zwolle",
+  "Deventer",
+  "Delft",
+  "Alkmaar",
+  "Heerlen"
+];
+
 const ContactOne = ({ className = "" }) => {
-  const [state, handleSubmit] = useForm("myzjgkwk"); // Замени с твоя Formspree ID
+  const [state, handleSubmit] = useForm("myzjgkwk");
 
   return (
     <section className={classNames("contact-one", className)}>
@@ -47,11 +75,7 @@ const ContactOne = ({ className = "" }) => {
                             placeholder="Full Name"
                             required
                           />
-                          <ValidationError
-                            prefix="Name"
-                            field="name"
-                            errors={state.errors}
-                          />
+                          <ValidationError prefix="Name" field="name" errors={state.errors} />
                         </div>
                       </Col>
 
@@ -63,11 +87,35 @@ const ContactOne = ({ className = "" }) => {
                             placeholder="Email Address"
                             required
                           />
-                          <ValidationError
-                            prefix="Email"
-                            field="email"
-                            errors={state.errors}
+                          <ValidationError prefix="Email" field="email" errors={state.errors} />
+                        </div>
+                      </Col>
+                    </Row>
+
+                    <Row>
+                      <Col xl={6} lg={6} md={6}>
+                        <div className="comment-form__input-box">
+                          <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            required
                           />
+                          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
+                        </div>
+                      </Col>
+
+                      <Col xl={6} lg={6} md={6}>
+                        <div className="comment-form__input-box">
+                          <select name="city" required>
+                            <option value="">Select City</option>
+                            {dutchCities.map((city) => (
+                              <option key={city} value={city}>
+                                {city}
+                              </option>
+                            ))}
+                          </select>
+                          <ValidationError prefix="City" field="city" errors={state.errors} />
                         </div>
                       </Col>
                     </Row>
@@ -80,11 +128,7 @@ const ContactOne = ({ className = "" }) => {
                             placeholder="Message Details"
                             required
                           ></textarea>
-                          <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                          />
+                          <ValidationError prefix="Message" field="message" errors={state.errors} />
                         </div>
 
                         <button
