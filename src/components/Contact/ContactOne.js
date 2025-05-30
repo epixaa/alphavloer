@@ -102,7 +102,7 @@ const ContactOne = ({ className = "" }) => {
                         </div>
                       </Col>
                     </Row>
-
+<Row>
 <Col xl={6} lg={6} md={6}>
   <div className="comment-form__input-box">
     <input
@@ -136,7 +136,7 @@ const ContactOne = ({ className = "" }) => {
     <ValidationError prefix="City" field="city" errors={state.errors} />
   </div>
 </Col>
-
+</Row>
 
                     <Row>
                       <Col xl={12} lg={12}>
