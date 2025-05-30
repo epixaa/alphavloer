@@ -2,8 +2,10 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { TextSplit, Title } from "@/Reuseable";
+import { contactOne } from "@/data/contact";
+import classNames from "@/utils/classNames";
 
-const { shape, bg, count, title, tagline, title2 } = contactMail;
+const { shape, bg, count, title, tagline, title2 } = contactOne;
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("myzjgkwk");
