@@ -8,7 +8,6 @@ import ProjectsOne from "@/components/Projects/ProjectsOne";
 import SiteFooter from "@/components/SiteFooter/SiteFooter";
 import TestimonialOne from "@/components/Testimonial/TestimonialOne";
 import WorkOne from "@/components/Work/WorkOne";
-import ContactMail from "@/components/Contact/ContactMail"
 import { aboutOne } from "@/data/about";
 import React from "react";
 
@@ -22,7 +21,6 @@ const Home = () => {
       <WorkOne />
       <ProjectsOne showTop projectsCount={4} />
       <ContactOne />
-      <ContactMail />
       <TestimonialOne />
       <SiteFooter />
     </Layout>
