@@ -1,31 +1,26 @@
+import React from "react";
 import { contactOne } from "@/data/contact";
 import { TextSplit, Title } from "@/Reuseable";
 import classNames from "@/utils/classNames";
-import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import { useForm } from "react-hook-form";
+import { useForm, ValidationError } from "@formspree/react";
 
-const { shape, bg, count, title, tagline, title2 } = contactOne;
+const { shape, bg, title2, tagline } = contactOne;
 
 const ContactOne = ({ className = "" }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [state, handleSubmit] = useForm("myzjgkwk"); // Замени с твоя Formspree ID
 
   return (
     <section className={classNames("contact-one", className)}>
       <div className="shape1">
         <Image src={shape.src} alt="" />
       </div>
+
       <div
         className="contact-one__img"
         style={{ backgroundImage: `url(${bg.src})` }}
-      >
+      ></div>
 
-      </div>
       <Container>
         <Row>
           <Col xl={6} lg={0}></Col>
@@ -34,61 +29,75 @@ const ContactOne = ({ className = "" }) => {
               <Title tagline={tagline}>
                 <TextSplit text={title2} />
               </Title>
-              <div className="contact-one__content-comment-form">
-                <form
-                  className="comment-one__form contact-form-validated"
-                  onSubmit={handleSubmit(onSubmit)}
-                >
-                  <Row>
-                    <Col xl={6} lg={6} md={6}>
-                      <div className="comment-form__input-box">
-                        <input
-                          type="text"
-                          placeholder="Full Name"
-                          name="name"
-                          {...register("name", { required: true })}
-                        />
-                        {errors.name && (
-                          <span className="error">This field is required.</span>
-                        )}
-                      </div>
-                    </Col>
-                    <Col xl={6} lg={6} md={6}>
-                      <div className="comment-form__input-box">
-                        <input
-                          type="email"
-                          placeholder="Email Address"
-                          name="email"
-                          {...register("email", { required: true })}
-                        />
-                        {errors.email && (
-                          <span className="error">This field is required.</span>
-                        )}
-                      </div>
-                    </Col>
-                  </Row>
 
-                  <Row>
-                    <Col xl={12} lg={12}>
-                      <div className="comment-form__input-box">
-                        <textarea
-                          name="message"
-                          placeholder="Message Details"
-                          {...register("message", { required: true })}
-                        ></textarea>
-                        {errors.message && (
-                          <span className="error">This field is required.</span>
-                        )}
-                      </div>
-                      <button
-                        type="submit"
-                        className="thm-btn comment-form__btn"
-                      >
-                        Send
-                      </button>
-                    </Col>
-                  </Row>
-                </form>
+              <div className="contact-one__content-comment-form">
+                {state.succeeded ? (
+                  <p className="success-message">Благодарим! Съобщението е изпратено успешно.</p>
+                ) : (
+                  <form
+                    className="comment-one__form contact-form-validated"
+                    onSubmit={handleSubmit}
+                  >
+                    <Row>
+                      <Col xl={6} lg={6} md={6}>
+                        <div className="comment-form__input-box">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            required
+                          />
+                          <ValidationError
+                            prefix="Name"
+                            field="name"
+                            errors={state.errors}
+                          />
+                        </div>
+                      </Col>
+
+                      <Col xl={6} lg={6} md={6}>
+                        <div className="comment-form__input-box">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            required
+                          />
+                          <ValidationError
+                            prefix="Email"
+                            field="email"
+                            errors={state.errors}
+                          />
+                        </div>
+                      </Col>
+                    </Row>
+
+                    <Row>
+                      <Col xl={12} lg={12}>
+                        <div className="comment-form__input-box">
+                          <textarea
+                            name="message"
+                            placeholder="Message Details"
+                            required
+                          ></textarea>
+                          <ValidationError
+                            prefix="Message"
+                            field="message"
+                            errors={state.errors}
+                          />
+                        </div>
+
+                        <button
+                          type="submit"
+                          className="thm-btn comment-form__btn"
+                          disabled={state.submitting}
+                        >
+                          Send
+                        </button>
+                      </Col>
+                    </Row>
+                  </form>
+                )}
               </div>
             </div>
           </Col>
