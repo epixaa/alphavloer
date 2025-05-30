@@ -92,33 +92,42 @@ const ContactOne = ({ className = "" }) => {
                       </Col>
                     </Row>
 
-                    <Row>
-                      <Col xl={6} lg={6} md={6}>
-                        <div className="comment-form__input-box">
-                          <input
-                            type="tel"
-                            name="phone"
-                            placeholder="Phone Number"
-                            required
-                          />
-                          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
-                        </div>
-                      </Col>
+<Row>
+  <Col xl={6} lg={6} md={6}>
+    <div className="comment-form__input-box">
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required
+        className="form-control"
+      />
+      <ValidationError prefix="Phone" field="phone" errors={state.errors} />
+    </div>
+  </Col>
 
-                      <Col xl={6} lg={6} md={6}>
-                        <div className="comment-form__input-box">
-                          <select name="city" required>
-                            <option value="">Select City</option>
-                            {dutchCities.map((city) => (
-                              <option key={city} value={city}>
-                                {city}
-                              </option>
-                            ))}
-                          </select>
-                          <ValidationError prefix="City" field="city" errors={state.errors} />
-                        </div>
-                      </Col>
-                    </Row>
+  <Col xl={6} lg={6} md={6}>
+    <div className="comment-form__input-box">
+      <select
+        name="city"
+        required
+        className="form-control"
+        defaultValue=""
+        style={{ height: "60px", padding: "0 20px" }} // съответстващо на input стила
+      >
+        <option value="" disabled>
+          Select City
+        </option>
+        {dutchCities.map((city) => (
+          <option key={city} value={city}>
+            {city}
+          </option>
+        ))}
+      </select>
+      <ValidationError prefix="City" field="city" errors={state.errors} />
+    </div>
+  </Col>
+</Row>
 
                     <Row>
                       <Col xl={12} lg={12}>
