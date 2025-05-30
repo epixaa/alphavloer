@@ -1,7 +1,9 @@
 import React from 'react';
-import { TextSplit, Title } from "@/Reuseable";
 import { useForm, ValidationError } from '@formspree/react';
 import { Col, Container, Image, Row } from "react-bootstrap";
+import { TextSplit, Title } from "@/Reuseable";
+
+const { shape, bg, count, title, tagline, title2 } = contactMail;
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("myzjgkwk");
@@ -28,7 +30,7 @@ function ContactForm() {
                 <TextSplit text={title2} />
               </Title>
               <div className="contact-one__content-comment-form">
-    <form onSubmit={handleSubmit} className="comment-one__form contact-form-validated">
+    <form onSubmit={handleSubmit}>
         <Col xl={6} lg={6} md={6}>
         <div className="comment-form__input-box">
       <label htmlFor="email">
