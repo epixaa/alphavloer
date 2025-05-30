@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { Col, Container, Image, Row } from "react-bootstrap";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("myzjgkwk");
@@ -8,6 +9,8 @@ function ContactForm() {
   }
   return (
     <form onSubmit={handleSubmit}>
+        <Col xl={6} lg={6} md={6}>
+        <div className="comment-form__input-box">
       <label htmlFor="email">
         Email Address
       </label>
@@ -21,6 +24,10 @@ function ContactForm() {
         field="email"
         errors={state.errors}
       />
+      </div>
+      </Col>
+      <Col xl={12} lg={12}>
+       <div className="comment-form__input-box">
       <textarea
         id="message"
         name="message"
@@ -30,7 +37,9 @@ function ContactForm() {
         field="message"
         errors={state.errors}
       />
-      <button type="submit" disabled={state.submitting}>
+      </div>
+      </Col>
+      <button type="submit" disabled={state.submitting} className="thm-btn comment-form__btn">
         Submit
       </button>
     </form>
