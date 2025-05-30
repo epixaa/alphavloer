@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@marketsystems/nextjs13-appdir-breadcrumbs": "^1.0.4",
     "bootstrap": "^5.1.3",
     "next": "^13.5.11",
