@@ -35,6 +35,17 @@ const dutchCities = [
   "Heerlen"
 ];
 
+const sharedInputStyle = {
+  backgroundColor: "#f4f4f4",
+  border: "1px solid #e0e0e0",
+  padding: "15px 20px",
+  width: "100%",
+  borderRadius: "5px",
+  fontSize: "16px",
+  color: "#333",
+};
+
+
 const ContactOne = ({ className = "" }) => {
   const [state, handleSubmit] = useForm("myzjgkwk");
 
@@ -74,7 +85,6 @@ const ContactOne = ({ className = "" }) => {
                             name="name"
                             placeholder="Full Name"
                             required
-                            className="form-control"
                           />
                           <ValidationError prefix="Name" field="name" errors={state.errors} />
                         </div>
@@ -87,49 +97,46 @@ const ContactOne = ({ className = "" }) => {
                             name="email"
                             placeholder="Email Address"
                             required
-                            className="form-control"
                           />
                           <ValidationError prefix="Email" field="email" errors={state.errors} />
                         </div>
                       </Col>
                     </Row>
 
-<Row>
-  <Col xl={6} lg={6} md={6}>
-    <div className="comment-form__input-box">
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        required
-        className="form-control"
-      />
-      <ValidationError prefix="Phone" field="phone" errors={state.errors} />
-    </div>
-  </Col>
+<Col xl={6} lg={6} md={6}>
+  <div className="comment-form__input-box">
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+      required
+      style={sharedInputStyle}
+    />
+    <ValidationError prefix="Phone" field="phone" errors={state.errors} />
+  </div>
+</Col>
 
-  <Col xl={6} lg={6} md={6}>
-    <div className="comment-form__input-box">
-      <select
-        name="city"
-        required
-        className="form-control"
-        defaultValue=""
-        style={{ height: "60px", padding: "0 20px" }} // съответстващо на input стила
-      >
-        <option value="" disabled>
-          Select City
+<Col xl={6} lg={6} md={6}>
+  <div className="comment-form__input-box">
+    <select
+      name="city"
+      required
+      defaultValue=""
+      style={sharedInputStyle}
+    >
+      <option value="" disabled>
+        Select City
+      </option>
+      {dutchCities.map((city) => (
+        <option key={city} value={city}>
+          {city}
         </option>
-        {dutchCities.map((city) => (
-          <option key={city} value={city}>
-            {city}
-          </option>
-        ))}
-      </select>
-      <ValidationError prefix="City" field="city" errors={state.errors} />
-    </div>
-  </Col>
-</Row>
+      ))}
+    </select>
+    <ValidationError prefix="City" field="city" errors={state.errors} />
+  </div>
+</Col>
+
 
                     <Row>
                       <Col xl={12} lg={12}>
@@ -138,7 +145,6 @@ const ContactOne = ({ className = "" }) => {
                             name="message"
                             placeholder="Message Details"
                             required
-                            className="form-control"
                           ></textarea>
                           <ValidationError prefix="Message" field="message" errors={state.errors} />
                         </div>
