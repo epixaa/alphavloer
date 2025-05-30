@@ -74,6 +74,7 @@ const ContactOne = ({ className = "" }) => {
                             name="name"
                             placeholder="Full Name"
                             required
+                            className="form-control"
                           />
                           <ValidationError prefix="Name" field="name" errors={state.errors} />
                         </div>
@@ -86,6 +87,7 @@ const ContactOne = ({ className = "" }) => {
                             name="email"
                             placeholder="Email Address"
                             required
+                            className="form-control"
                           />
                           <ValidationError prefix="Email" field="email" errors={state.errors} />
                         </div>
@@ -136,6 +138,7 @@ const ContactOne = ({ className = "" }) => {
                             name="message"
                             placeholder="Message Details"
                             required
+                            className="form-control"
                           ></textarea>
                           <ValidationError prefix="Message" field="message" errors={state.errors} />
                         </div>
