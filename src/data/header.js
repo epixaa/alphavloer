@@ -70,11 +70,6 @@ export const socials3 = [
     href: "#",
   },
   {
-    id: 3,
-    icon: "fab fa-pinterest-p",
-    href: "#",
-  },
-  {
     id: 4,
     icon: "fab fa-instagram",
     href: "#",
@@ -105,7 +100,7 @@ export const mobileNav = {
 export const hiddenBar = {
   logo,
   aboutText:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   address: "Heel Nederland",
   ...info,
   year: new Date().getFullYear(),
